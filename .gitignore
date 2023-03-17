@@ -1,0 +1,5 @@
+# Ignore Image, Just Upload asset.txt and webpage.txt
+
+*.png
+*.jpg
+*.jpeg
