@@ -13,7 +13,8 @@ For this repo, we currently accepting server from Indonesia and we will ignore a
 
 ## Q&A
 Q: Why slot is limited?
-A: Discord give only 300 image asset to PerApplication, i'm use 3 of them for internal image;
+
+A: Discord give only 300 image asset to PerApplication, i'm use 3 of them for internal image
 
 ## Preview:
 ![Screenshot](https://i.imgur.com/PqvWFbp.png)
