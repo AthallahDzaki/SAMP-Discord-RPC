@@ -1,4 +1,5 @@
 #include "discord.h"
+#include "env.h"
 
 namespace Discord
 {
@@ -23,7 +24,8 @@ namespace Discord
 		handlers.joinGame = joinGame;
 		handlers.spectateGame = spectateGame;
 		handlers.joinRequest = joinRequest;
-		Discord_Initialize("416719211960991756", &handlers, 1, nullptr);
+		//Discord_Initialize("416719211960991756", &handlers, 1, nullptr);
+		Discord_Initialize(DiscordAPPID, &handlers, 1, nullptr);
 		Discord_ClearPresence();
 	}
 
@@ -37,6 +39,17 @@ namespace Discord
 		discordPresence.largeImageText = imageDetails;
 		discordPresence.smallImageKey = "info";
 		discordPresence.smallImageText = infoDetails;
+
+		std::string joinURL = "samp://";
+		std::string injection = joinURL + state;
+
+		DiscordButton buttons[] = {
+		  {"Join Now", injection.c_str()},
+		  {"Github Repo", "https://github.com/AthallahDzaki/SAMP-Discord-RPC"},
+		};
+
+		discordPresence.buttons = buttons;
+
 		Discord_UpdatePresence(&discordPresence);
 	}
 }

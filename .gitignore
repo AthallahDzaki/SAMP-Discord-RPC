@@ -6,6 +6,14 @@
 *.lo
 *.o
 *.obj
+*.iobj
+
+# Visual Studio Log
+*.tlog
+*.log
+
+# Program Debug Library
+*.pdb
 
 # Precompiled Headers
 *.gch
@@ -30,3 +38,14 @@
 *.exe
 *.out
 *.app
+
+# Visual Studio
+.vs
+*.recipe
+*.lastbuildstate
+
+# ENV
+env.h
+
+# Generated Folder
+Release/

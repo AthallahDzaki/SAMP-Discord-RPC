@@ -1,3 +1,4 @@
+#include <windows.h>
 #include <process.h>
 #include "client.h"
 #include "discord.h"
@@ -42,7 +43,7 @@ static void process(void*)
 							image = "lock";
 						}
 						else if (information.basic.players < 10) {
-							image = "tumbleweed";
+							image = "metaicon";
 						}
 					}
 					Discord::update(start, fullAddress, information.hostname, image, info, players);
