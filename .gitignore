@@ -44,8 +44,5 @@
 *.recipe
 *.lastbuildstate
 
-# ENV
-env.h
-
 # Generated Folder
 Release/
