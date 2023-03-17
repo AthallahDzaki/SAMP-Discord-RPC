@@ -43,5 +43,8 @@
     <ClInclude Include="discord-rpc\discord_rpc.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="env.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

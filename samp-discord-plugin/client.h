@@ -18,6 +18,7 @@ namespace SAMP
 		std::string username;
 
 		std::string logoFromStream(std::stringstream& stream, std::string default);
+		std::string webpageFromStream(std::stringstream& stream, std::string default);
 	};
 
 	bool readServerData(const char* cmdline, ServerData& data);

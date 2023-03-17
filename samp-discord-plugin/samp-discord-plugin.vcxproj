@@ -64,6 +64,7 @@
     <ClInclude Include="discord-rpc\discord_rpc.h" />
     <ClInclude Include="discord.h" />
     <ClInclude Include="client.h" />
+    <ClInclude Include="env.h" />
     <ClInclude Include="http.h" />
     <ClInclude Include="query.h" />
   </ItemGroup>
