@@ -17,6 +17,6 @@ Q: Why slot is limited?
 A: Discord give only 300 image asset to PerApplication, i'm use 3 of them for internal image
 
 ## Preview:
-![Screenshot](https://i.imgur.com/PqvWFbp.png)
-![Screenshot](https://i.imgur.com/CXh1hDT.png)
-![Screenshot](https://i.imgur.com/khG9OZe.png)
+![Screenshot](https://i.imgur.com/PoHP6rv.png)
+![Screenshot](https://i.imgur.com/WIyNylH.png)
+![Screenshot](https://i.imgur.com/ZybZAuQ.png)
