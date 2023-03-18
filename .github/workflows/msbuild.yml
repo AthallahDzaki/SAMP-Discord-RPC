@@ -46,11 +46,8 @@ jobs:
     - name: "Release"
       run: |
         cd Release
-    - uses: "marvinpinto/action-automatic-releases@latest"
-      with:
-        repo_token: "${{ secrets.GITHUB_TOKEN }}"
-        automatic_release_tag: "latest"
-        prerelease: true
-        title: "Latest Release"
-        files: |
-          *.asi
+    - uses: pyTooling/Actions/releaser@r0
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          tag: nightly
+          files: *.asi
