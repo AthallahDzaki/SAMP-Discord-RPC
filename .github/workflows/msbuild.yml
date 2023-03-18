@@ -47,7 +47,8 @@ jobs:
       run: |
         cd Release
     - uses: pyTooling/Actions/releaser@r0
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          tag: nightly
-          files: *.asi
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        tag: nightly
+        files: |
+          *.asi
