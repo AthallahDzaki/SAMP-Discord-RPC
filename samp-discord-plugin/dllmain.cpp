@@ -1,5 +1,6 @@
 #include <windows.h>
 #include <process.h>
+#include <iostream>
 #include "client.h"
 #include "discord.h"
 #include "query.h"
@@ -28,22 +29,6 @@ static void process(void*)
 			}
 		}
 
-		std::string webpage = "https://github.com/AthallahDzaki/SAMP-Discord-RPC";
-		{
-			std::stringstream httpResponseString;
-			if (
-				HTTP::WebRequest(
-					[&httpResponseString](auto data, auto len)
-					{
-						httpResponseString.write(data, len);
-						return true;
-					}, "Mozilla/5.0", "raw.githubcontent.com", INTERNET_DEFAULT_HTTPS_PORT)
-				.get("AthallahDzaki/SAMP-Discord-RPC/asset/webpage.txt")
-				) {
-				webpage = data.webpageFromStream(httpResponseString, webpage);
-			}
-		}
-
 		auto start = std::time(0);
 		if (data.connect == SAMP::SAMP_CONNECT_SERVER) {
 			SAMP::Query query(data.address, std::stoi(data.port));
@@ -62,14 +47,14 @@ static void process(void*)
 							image = "metaicon";
 						}
 					}
-					Discord::update(start, fullAddress, information.hostname, image, info, players, webpage);
+					Discord::update(start, fullAddress, information.hostname, image, info, players);
 					Sleep(15000-QUERY_DEFAULT_TIMEOUT*2);
 				}
 			}
 		}
 		else if (data.connect == SAMP::SAMP_CONNECT_DEBUG) {
 			while (true) {
-				Discord::update(start, "localhost", "Debug server", "metaicon", "Playing debug mode in English", "Most likely 1 player online as it's debug mode", "https://github.com/AthallahDzaki/SAMP-Discord-RPC");
+				Discord::update(start, "localhost", "Debug server", "metaicon", "Playing debug mode in English", "Most likely 1 player online as it's debug mode");
 				Sleep(15000);
 			}
 		}

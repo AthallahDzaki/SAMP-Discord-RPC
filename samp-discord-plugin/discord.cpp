@@ -29,7 +29,7 @@ namespace Discord
 		Discord_ClearPresence();
 	}
 
-	void update(const time_t time, const char* state, const char* details, const char* image, const char* imageDetails, const char* infoDetails, const char* webpage)
+	void update(const time_t time, const char* state, const char* details, const char* image, const char* imageDetails, const char* infoDetails)
 	{
 		DiscordRichPresence discordPresence = { 0 };
 		discordPresence.state = state;
@@ -45,7 +45,7 @@ namespace Discord
 
 		DiscordButton buttons[] = {
 		  {"Join Now", injection.c_str()},
-		  {"Website", webpage},
+		  {"Github Source", "https://github.com/AthallahDzaki/SAMP-Discord-RPC"},
 		};
 
 		discordPresence.buttons = buttons;
